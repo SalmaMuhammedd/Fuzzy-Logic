@@ -5,12 +5,14 @@ public class FuzzySet {
     String type;
     ArrayList<Integer> values;
     double degreeOfMembership;
+    double centroid;
 
     public FuzzySet(String name, String type) {
         this.name = name;
         this.type = type;
         this.values = new ArrayList<>();
         this.degreeOfMembership = -1;
+        this.centroid = -1;
     }
 
     public String getName() {
@@ -72,9 +74,8 @@ public class FuzzySet {
     public String toString() {
         return "FuzzySet{" +
                 "name='" + name + '\'' +
-                ", type='" + type + '\'' +
-                ", values=" + values +
                 ", degreeOfMembership=" + degreeOfMembership +
+                ", centroid=" + centroid +
                 '}';
     }
 }
